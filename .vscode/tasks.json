@@ -1,0 +1,53 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sona:build:release",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "sona/sona.csproj",
+                "-c",
+                "Release"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sona:build:debug",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "sona/sona.csproj",
+                "-c",
+                "Debug"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sona:run",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "sona/sona.csproj",
+                "--configuration Release",
+            ],
+            "dependsOn": [
+                "sona:build:release"
+            ]
+        },
+        {
+            "label": "sona:format",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+            ]
+        }
+    ]
+}

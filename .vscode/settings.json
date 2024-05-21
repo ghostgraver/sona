@@ -1,0 +1,46 @@
+{
+    // 隐藏某些文件
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // "**/build": true,
+    },
+    // 保存时自动格式化
+    "editor.formatOnSave": true,
+    "[cs]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    // 修改了注释的颜色
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#4a524e",
+            "fontStyle": ""
+        }
+    },
+    // 右侧标尺
+    "editor.rulers": [
+        120
+    ],
+    // 关闭形参显示
+    "editor.inlayHints.enabled": "off",
+    // 任务栏 task 快捷按钮
+    "VsCodeTaskButtons.showCounter": true,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "sona:format",
+            "task": "sona:format"
+        },
+        {
+            "label": "sona:build:release",
+            "task": "sona:build:release"
+        },
+        {
+            "label": "sona:run",
+            "task": "sona:run"
+        }
+    ]
+}
