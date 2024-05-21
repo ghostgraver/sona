@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace sona;
 
 class Program
@@ -10,6 +12,9 @@ class Program
         a = 4;
         a = 5;
         Console.WriteLine("Hello, World!");
-        Console.ReadLine();
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            Console.ReadLine();
+        }
     }
 }
